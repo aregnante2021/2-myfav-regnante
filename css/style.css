@@ -1,0 +1,438 @@
+/* ensures that padding+margin don't mess up flow of website */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 3000px;
+}
+
+/* navigation */
+
+/* color palette for website = #414963-dark, #8dadb2-medium, #d8e7ea-light */
+
+/* fonts for website = title-gentium basic (bold-700), body-hind madurai (light-300) */
+
+/* think abt changing bg of nav to med color? */
+
+/* h offset v offset blur spread color */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 0 4px 1px rgb(0, 0, 0, 0.6);
+}
+
+.topnav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #414963;
+    }
+
+.topnav li{
+    float: left;
+}
+
+.topnav li a{
+    display: block;
+    padding: 14px 16px;
+}
+
+.topnav li a:link, .topnav li a:visited, .topnav li a:active{
+    color: #d8e7ea;
+    text-decoration: none;
+    font-family: "Hind Madurai";
+    font-weight: 300;
+    font-size: 18px;
+    transition: 0.25s;
+}
+
+.topnav li a:hover{
+    background-color: #d8e7ea;
+    color: #414963;
+    transition: 0.25s;
+}
+
+/* adjust landing of navigation links */
+section::before { 
+  display: block; 
+  content: " "; 
+  margin-top: -65px; 
+  height: 65px; 
+  visibility: hidden; 
+  pointer-events: none;
+}
+
+@media screen and (max-width: 600px) {
+    section::before { 
+        display: block; 
+        content: " "; 
+        margin-top: -275px; 
+        height: 275px; 
+        visibility: hidden; 
+        pointer-events: none;
+}
+}
+
+/* nav media query - changes vertical/horizontal orientation according to screen size */
+
+@media screen and (max-width: 600px) {
+    .topnav li {
+        float: none;
+    }
+    
+    header {
+        margin-top: 213px;
+    }
+}
+
+/* slideshow */
+
+header {
+    padding-top: 52px;
+    padding-bottom: 20px;
+}
+
+/* container */
+.slideshow-container {
+    max-width: 1920px;
+    position: relative;
+    margin: auto;
+}
+
+/* hide images by default */
+.mySlides {
+    display: none;
+}
+
+/* buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 12px;
+    color: #d8e7ea;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* button positioning */
+.next {
+  right: 0;
+    border-radius:3px 0 0 3px;
+}
+
+/* hover detail */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* caption */
+.text {
+    color: #d8e7ea;
+    font-family: "Hind Madurai";
+    font-weight: 300;
+    font-size: 14px;
+    padding: 5px 10px;
+    position: absolute;
+    text-align: center;
+    bottom: 5px;
+    left: 45.45%;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 4px 4px 0 0;
+    
+}
+
+/* image indicators */
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #d8e7ea;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: rgb(65, 73, 99, 0.85);
+}
+
+/* fade animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* responsive grid */
+
+/* widths for each column */
+.col-1 {
+    width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.33%;
+}
+.col-5 {
+    width: 41.66%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+}
+
+/*float all columns to the left*/
+[class*="col-"] {
+    float: left;
+}
+
+/*fit grid into flow of website*/
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* stack columns if screen is small */
+@media screen and (max-width: 600px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+main {
+    margin: 0 15px;
+}
+
+/* section styling */
+
+/* h offset v offset blur spread color */
+
+/* card styling */
+.card {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 5px 2px rgb(65, 73, 99, 0.3);
+    transition: 0.5s;
+    margin-bottom: 50px;
+}
+
+.card:hover {
+    box-shadow: 0 0 5px 2px rgb(65, 73, 99, 0.45);
+}
+
+/* card content styling */
+
+.card-title {
+    margin: 0;
+    padding: 0;
+    border-radius: 10px 0 0 10px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: -4px;
+    border: transparent;
+}
+
+@media screen and (max-width: 600px) {
+    .card-title {
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+.card-header {
+    background-color: #d8e7ea;
+    padding: 1px 20px 1px 20px;
+    border-top-right-radius: 10px;
+}
+
+.college {
+    font-family: "Gentium Basic", serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: #414963;
+    margin-bottom: 0;
+}
+
+.major {
+    font-family: "Gentium Basic", serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #414963;
+    margin-top: 0;
+}
+
+.card-content {
+    font-family: "Hind Madurai";
+    padding: 0 25px;
+    color: #414963;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.card-footer {
+    background-color: transparent;
+    border-top: 2px solid #d8e7ea;
+    font-family: "Hind Madurai";
+    padding: 0 25px;
+    color: #414963;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.footer-link {
+    font-size: 18px;
+    color: #d8e7ea;
+    transition: 0.35s;
+}
+
+.footer-link:hover {
+    color: #414963;
+}
+
+/* modal styling */
+
+/* background/placement of modal window */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* stuff in modal */
+.modal-content {
+    position: relative;
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    width: 80%;
+    font-family: "Hind Madurai";
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* text/video alignment in modal */
+.container {
+    padding: 0 30px 30px;
+}
+
+/* title text + bar */
+.modal-title {
+    background-color: #d8e7ea;
+    padding: 20px;
+    color: #414963;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    font-family: 'Gentium Basic', serif;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+/* close button */
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 0;
+    right: 12px;
+    font-size: 28px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.close:hover,
+.close:focus {
+    color: #414963;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* responsive youtube video */
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+} 
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
+
+/* hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* float helpers */
+.right {
+    float:right;
+}
+
+.left {
+    float: left;
+}
+
+.clearfix {
+    overflow: auto;
+}

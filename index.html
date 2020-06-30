@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<!-- keep waypoints in mind for scroll animation -->
+
+<html lang="en">
+
+    <head>
+        <title>College Choices</title>
+        <meta charset="utf-8">
+        <meta name="description" content="A responsive webpage about five of my college choices.">
+        <!-- scales webpage to same width as device it's being accessed on - makes websites more pleasant to look at on smaller devices such as mobile phones or tablets -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- css stylesheet -->
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <!-- font links -->
+        <link href="https://fonts.googleapis.com/css?family=Gentium+Basic&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Hind+Madurai&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/886f07209b.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <!-- navigation -->
+        <nav class="topnav">
+            <ul>
+                <li><a href="#syracuse">Syracuse</a></li>
+                <li><a href="#northeastern">Northeastern</a></li>
+                <li><a href="#marist">Marist College</a></li>
+                <li><a href="#rit">RIT</a></li>
+                <li><a href="#quinnipiac">Quinnipiac</a></li>
+            </ul>
+        </nav>
+        
+        <header>
+            <div class="slideshow-container">
+                <!-- slides and captions -->
+                <!-- slide 1 -->
+                <div class="mySlides fade">
+                    <img src="img/slider-images/syracuse-slider.jpg" style="width:100%">
+                    <div class="text">Syracuse campus</div>
+                </div>
+                <!-- slide 2 -->
+                <div class="mySlides fade">
+                    <img src="img/slider-images/quinnipiac-slider.jpg" style="width:100%">
+                    <div class="text">Quinnipiac campus</div>
+                </div>
+                <!-- slide 3 -->
+                <div class="mySlides fade">
+                    <img src="img/slider-images/marist-slider.jpg" style="width:100%">
+                    <div class="text">Marist campus</div>
+                </div>
+                <!-- buttons to move thru slideshow -->
+                <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-caret-left"></i></a>
+                <a class="next" onclick="plusSlides(1)"><i class="fa fa-caret-right"></i></a>
+            </div>
+            <br>
+            <!-- image indicators -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </header>
+        
+        <!-- main content -->
+        <main>
+            <section id="syracuse" >
+                <div class="card">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="img/title-images/syracuse-title.jpg" class="card-title" alt="Image of the Syracuse University campus that has been captioned as Syracuse.">
+                        </div>
+                        <div class="col-6">
+                            <div class="card-header">
+                                <h2 class="college">S.I. Newhouse School of Public Communications</h2>
+                                <h3 class="major">
+                                    B.S. in Graphic Design 
+                                    <span id="myBtn">
+                                        <i class="fas fa-question-circle"></i>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="card-content">
+                                <p><i class="fas fa-signal"></i> 11.5% acceptance rate (specifically for Newhouse)</p>
+                                <p><i class="fas fa-pencil-ruler"></i> SAT Range: 1160-1350</p>
+                                <p><i class="fas fa-vial"></i> ACT Range: 25-30</p>
+                                <p><i class="fas fa-car-side"></i> 5 hours, 15 minutes</p>
+                                <p><i class="fas fa-running"></i> NCAA Division 1 Track and Field</p>
+                                <br>
+                            </div>
+                            <div class="card-footer">
+                                <p>Visit Syracuse's website <a href="https://www.syracuse.edu/" class="footer-link" target="_blank"><i class="fas fa-info-circle"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <h2 class="modal-title">What is Graphic Design?</h2>
+                    <span class="close">&times;</span>
+                    <div class="container">
+                        <p>A short video about the basics of graphic design.</p>
+                        <div class='embed-container'>
+                            <iframe src='https://www.youtube.com/embed/9QwOVLts5wY' frameborder='0' allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <section id="northeastern">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="img/title-images/northeastern-title.jpg" class="card-title" alt="Image of the Northeastern University campus that has been captioned as Northeastern.">
+                        </div>
+                        <div class="col-6">
+                            <div class="card-header">
+                                <h2 class="college">College of Arts, Media, and Design (CAMD)</h2>
+                                <h3 class="major">B.A. in Communication and Graphic and Information Design</h3>
+                            </div>
+                            <div class="card-content">
+                                <p><i class="fas fa-signal"></i> 28.9% acceptance rate</p>
+                                <p><i class="fas fa-pencil-ruler"></i> SAT Range: 1370-1520</p>
+                                <p><i class="fas fa-vial"></i> ACT Range: 32-34</p>
+                                <p><i class="fas fa-car-side"></i> 30 minutes</p>
+                                <p><i class="fas fa-running"></i> NCAA Division 1 Track and Field</p>
+                                <br>
+                            </div>
+                            <div class="card-footer">
+                                <p>Visit Northeastern's website <a href="https://www.northeastern.edu/" class="footer-link" target="_blank"><i class="fas fa-info-circle"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="marist">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="img/title-images/marist-title.jpg" class="card-title" alt="Image of the Marist campus that has been captioned as Marist College.">
+                        </div>
+                        <div class="col-6">
+                            <div class="card-header">
+                                <h2 class="college">School of Communication and the Arts</h2>
+                                <h3 class="major">B.S. in Digital Media and a Concentration in Graphic Design</h3>
+                            </div>
+                            <div class="card-content">
+                                <p><i class="fas fa-signal"></i> 41.0% acceptance rate</p>
+                                <p><i class="fas fa-pencil-ruler"></i> SAT Range: Test optional</p>
+                                <p><i class="fas fa-vial"></i> ACT Range: Test optional</p>
+                                <p><i class="fas fa-car-side"></i> 3 hours, 30 minutes</p>
+                                <p><i class="fas fa-running"></i> NCAA Division 1 Track and Field</p>
+                                <br>
+                            </div>
+                            <div class="card-footer">
+                                <p>Visit Marist's website <a href="https://www.marist.edu/" class="footer-link" target="_blank"><i class="fas fa-info-circle"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="rit">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="img/title-images/rit-title.jpg" class="card-title" alt="Image of the Rochester Institute of Technology campus that has been captioned as RIT.">
+                        </div>
+                        <div class="col-6">
+                            <div class="card-header">
+                                <h2 class="college">College of Art and Design</h2>
+                                <h3 class="major">B.F.A. in Graphic Design</h3>
+                            </div>
+                            <div class="card-content">
+                                <p><i class="fas fa-signal"></i> 54.9% acceptance rate</p>
+                                <p><i class="fas fa-pencil-ruler"></i> SAT Range: 1190-1380</p>
+                                <p><i class="fas fa-vial"></i> ACT Range: 26-32</p>
+                                <p><i class="fas fa-car-side"></i> 7 hours, 15 minutes</p>
+                                <p><i class="fas fa-running"></i> NCAA Division 3 Track and Field</p>
+                                <br>
+                            </div>
+                            <div class="card-footer">
+                                <p>Visit RIT's website <a href="https://www.rit.edu/" class="footer-link" target="_blank"><i class="fas fa-info-circle"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="quinnipiac">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="img/title-images/quinnipiac-title.jpg" class="card-title" alt="Image of the Quinnipiac University campus that has been captioned as Quinnipiac.">
+                        </div>
+                        <div class="col-6">
+                            <div class="card-header">
+                                <h2 class="college">School of Communication</h2>
+                                <h3 class="major">B.F.A. in Graphic and Interactive Design</h3>
+                            </div>
+                            <div class="card-content">
+                                <p><i class="fas fa-signal"></i> 76.4% acceptance rate</p>
+                                <p><i class="fas fa-pencil-ruler"></i> SAT Range: 1080-1260</p>
+                                <p><i class="fas fa-vial"></i> ACT Range: 23-27</p>
+                                <p><i class="fas fa-car-side"></i> 2 hours, 15 minutes</p>
+                                <p><i class="fas fa-running"></i> NCAA Division 1 Track and Field</p>
+                                <br>
+                            </div>
+                            <div class="card-footer">
+                                <p>Visit Quinnipiac's website <a href="https://www.qu.edu/" class="footer-link" target="_blank"><i class="fas fa-info-circle"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        
+        <script src="js/slideshow.js"></script>
+        <script src="js/modal.js"></script>
+        
+    </body>
+
+</html>
